@@ -63,6 +63,17 @@ public class App {
                     System.out.print(" 1.Coffee              ");
                     System.out.print(" 2.Milk                ");
                     System.out.print(" 3.Tea                 ");
+                    System.out.print(" 7.OrangeBreeze              ");
+                    System.out.print(" 8.CoconutWaterSlush                ");
+                    System.out.print(" 9.RaspberryVanillaSoda                 ");
+                     System.out.print(" 10.MelonSorbetFloat                 ");
+		    System.out.print(" 11.Apple Juice                 ");
+                    System.out.print(" 12.Bananna Juice                 ");
+                    System.out.print(" 13.Mango Juice                ");
+			System.out.print(" 14.Peach Smoothie                ");
+			System.out.print(" 15.Blueberries Smoothie               ");
+			System.out.print(" 16. Dragon Fruit Smoothie               ");
+			System.out.print(" 17. PineApple Smmothie               ");
                     
                     // END PASTE - right-click / Format
                     System.out.println();
@@ -110,39 +121,87 @@ public class App {
                             var gingerale = new Gingerale(25.00, "gingerale", 10.00, 65.00);
                             System.out.println("I'm " + gingerale.getName() + ", a " + gingerale.getDescription()+ ".");
                         } 
-                        
-                        case 11 -> {
-                            var b = new PeachSmoothie(25.5, 9.0, 5, 5, "Smoothie");
+                            case 7 -> {
+                            var b = new OrangeBreeze(10.00,1,"OrangeBreeze");
+                            var n = b.getName();
+                            var d = b.calculatebill();
+                            System.out.println("I'm " + n + ", my price is  " + d + ".");
+                        }
+                        case 8 -> {
+                            var b = new CoconutWaterSlush(20.00,1,"CoconutWaterSlush");
+                            var n = b.getName();
+                            var d = b.calculatebill();
+                            System.out.println("I'm " + n + ", my price is  " + d + ".");
+                        }
+                        case 9 -> {
+                            var b = new RaspberryVanillaSoda(25.00,1,"RaspberryVanillaSoda");
+                            var n = b.getName();
+                            var d = b.calculatebill();
+                            System.out.println("I'm " + n + ", my price is  " + d + ".");
+                        }
+						case 10 -> {
+                            var b = new MelonSorbetFloat(35.00f,1,"MelonSorbetFloat");
+                            var n = b.getName();
+                            var d = b.calculatebill();
+                            System.out.println("I'm " + n + ", my price is  " + d + ".");
+                        }
+				    case 11 -> {
+                            var b = new AppleJuice("Apple Juice");
+                            var n = b.getName();
+                            var d = b.getDescription();
+                            var c = b.juiceCost();
+                            System.out.println("I'm " + n + ", a " + d + ".");
+                            System.out.println(c);
+                        }
+                        case 12 -> {
+                            var b = new BanannaJuice("bananna");
+                            var n = b.getName();
+                            var d = b.getDescription();
+                            var c = b.juiceCost();
+                            System.out.println("I'm " + n + ", a " + d + ".");
+                            System.out.println("Cost of Banana Juice is "+c);
+                        }
+                        case 13 -> {
+                            var b = new MangoJuice("Mango Juice");
+                            var n = b.getName();
+                            var d = b.getDescription();
+                            var c = b.juiceCost();
+                            System.out.println("I'm " + n + ", a " + d + ".");
+                            System.out.println(c);
+                        }
+			   
+                       case 14 -> {
+                            var b = new PeachSmoothie(25.5, 9.0, 5, 5, "Peach Smoothie");
                             var n = b.getName();
                             var d = b.getDescription();
                             var e = b.calCost();
                             System.out.println("I'm " + n + " , " + d + ","+e);
                         }
                         
-                        case 12 -> {
-                            var b = new BlueBerriesSmoothie(45.5, 5.0, 7, 3, "Smoothie");
+                        case 15 -> {
+                            var b = new BlueBerriesSmoothie(45.5, 5.0, 7, 3, "Blueberries Smoothie");
                             var n = b.getName();
                             var d = b.getDescription();
                             var e = b.calCost();
                             System.out.println("I'm " + n + " , " + d + ","+ e);
                         }
                         
-                        case 13 -> {
-                            var b = new DragonFruitSmoothie(7.0, 10, 6, "Smoothie");
+                        case 16 -> {
+                            var b = new DragonFruitSmoothie(7.0, 10, 6, "Dragon FriutSmoothie");
                             var n = b.getName();
                             var d = b.getDescription();
                             var e = b.calCost();
                             System.out.println("I'm " + n + " , " + d + ","+ e);
                         }
                         
-                        case 14 -> {
-                            var b = new PineAppleSmoothie(15.5, 8.0, 13, 9, "Smoothie");
+                        case 17 -> {
+                            var b = new PineAppleSmoothie(15.5, 8.0, 13, 9, "Pineapple Smoothie");
                             var n = b.getName();
                             var d = b.getDescription();
                             var e = b.calCost();
                             System.out.println("I'm " + n + " , " + d + ","+ e);
                         }
-                        
+                         
                         //// END PASTE (right-click and Format )
                         default -> {
                         }
